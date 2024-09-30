@@ -72,20 +72,19 @@ def length_of_longest_substring_n(s):
       post: Returns an integer >= 0 representing the length of the longest substring
             in s that contains no repeating characters.
       """
-      
+
       l = 0
       r = 0
-      perm = list(s)
-      chars = []
+      chars = set()
       longest_len = 0
 
       while r < len(s):
             if s[r] not in chars:
-                  chars.append(s[r])
+                  chars.add(s[r])
                   r += 1
             else:
+                  chars.remove(s[l])
                   l += 1
-                  chars = perm[l:r]
             if len(chars) > longest_len:
                   longest_len = len(chars)
 
