@@ -28,7 +28,6 @@ def length_of_longest_substring_n3(s):
       """
       pass
 
-# TODO: implement this function. You may delete this comment when you are done.
 def length_of_longest_substring_n2(s):
       """
       Finds the length of the longest substring without repeating characters
@@ -59,19 +58,35 @@ def length_of_longest_substring_n2(s):
 
       return longest_len
 
-
 # TODO: implement this function. You may delete this comment when you are done.
 def length_of_longest_substring_n(s):
-    """
-    Finds the length of the longest substring without repeating characters
-    using a frequency list approach (O(N)), converting each character to
-    their corresponding numeric representation in ASCII as the index into the
-    frequency list. However, this approach stops early, breaking out of the inner
-    loop when a repeating character is found. You may also choose to challenge
-    yourself by implementing a sliding window approach.
+      """
+      Finds the length of the longest substring without repeating characters
+      using a frequency list approach (O(N)), converting each character to
+      their corresponding numeric representation in ASCII as the index into the
+      frequency list. However, this approach stops early, breaking out of the inner
+      loop when a repeating character is found. You may also choose to challenge
+      yourself by implementing a sliding window approach.
 
-    pre: s is a string of arbitrary length, possibly empty.
-    post: Returns an integer >= 0 representing the length of the longest substring
-          in s that contains no repeating characters.
-    """
-    pass
+      pre: s is a string of arbitrary length, possibly empty.
+      post: Returns an integer >= 0 representing the length of the longest substring
+            in s that contains no repeating characters.
+      """
+      
+      l = 0
+      r = 0
+      perm = list(s)
+      chars = []
+      longest_len = 0
+
+      while r < len(s):
+            if s[r] not in chars:
+                  chars.append(s[r])
+                  r += 1
+            else:
+                  l += 1
+                  chars = perm[l:r]
+            if len(chars) > longest_len:
+                  longest_len = len(chars)
+
+      return longest_len
