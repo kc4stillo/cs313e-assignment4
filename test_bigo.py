@@ -13,7 +13,7 @@ class TestLongestSubstringN3(unittest.TestCase):
 
     def test_length_of_longest_substring_n3_1(self):
         """O(N^3) approach with input 'bevo', answer is 4."""
-        self.assertEqual(length_of_longest_substring_n3("bevo"), 4)
+        self.assertEqual(length_of_longest_substring_n3("UTTower"), 5)
 
     def test_length_of_longest_substring_n3_2(self):
         """O(N^3) approach with empty string input, answer is 0."""
@@ -57,7 +57,7 @@ class TestLongestSubstringN2(unittest.TestCase):
 
     def test_length_of_longest_substring_n2_1(self):
         """O(N^2) approach with input 'bevo', answer is 4."""
-        self.assertEqual(length_of_longest_substring_n2("GEEKSFORGEEKS"), 7)
+        self.assertEqual(length_of_longest_substring_n2("bevo"), 4)
 
     def test_length_of_longest_substring_n2_2(self):
         """O(N^2) approach with empty string input, answer is 0."""
