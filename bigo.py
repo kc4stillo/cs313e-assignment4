@@ -15,11 +15,12 @@ Students. Academic penalties up to and including an F in the course are likely.
 UT EID 1: kmc5794
 """
 
+
 def length_of_longest_substring_n3(s):
     """
     Finds the length of the longest substring without repeating characters
     using a brute force approach (O(N^3)).
-    
+
     pre: s is a string of arbitrary length, possibly empty.
     post: Returns an integer >= 0 representing the length of the longest substring
         in s that contains no repeating characters.
@@ -41,6 +42,7 @@ def length_of_longest_substring_n3(s):
     return max_count
     # total time complexity = o(n^2)
 
+
 def length_of_longest_substring_n2(s):
     """
     Finds the length of the longest substring without repeating characters
@@ -52,13 +54,13 @@ def length_of_longest_substring_n2(s):
     post: Returns an integer >= 0 representing the length of the longest substring
         in s that contains no repeating characters.
     """
-    
+
     l = 0
     r = 0
     perm = list(s)
     chars = []
     longest_len = 0
-    
+
     # o(n) while loop
     while r < len(s):
         # o(n) operation
@@ -73,6 +75,7 @@ def length_of_longest_substring_n2(s):
             longest_len = len(chars)
     return longest_len
     # total time complexity = o(n^2)
+
 
 def length_of_longest_substring_n(s):
     """
